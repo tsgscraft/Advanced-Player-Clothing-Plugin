@@ -98,11 +98,6 @@ public final class AdvancedClothingPlugin extends JavaPlugin implements PluginMe
             case "advancedclothing:set_clothing" -> {
                 // Handle set clothing message
                 SetClothingData data = deserializeSetClothingData(message);
-                getLogger().info("Received set clothing message from client: " + player.getName() +
-                        ", UUID: " + data.uuid +
-                        ", Clothing Type: " + data.clothingType +
-                        ", Clothing ID: " + data.clothingId);
-
                 ClothingRegistry.setClothing(data.uuid, data.clothingType, data.clothingId);
 
                 for (Player p : getServer().getOnlinePlayers()) {
@@ -118,9 +113,6 @@ public final class AdvancedClothingPlugin extends JavaPlugin implements PluginMe
             case "advancedclothing:set_full_clothing" -> {
                 // Handle set full clothing message
                 SetFullClothingData data = deserializeSetFullClothingData(message);
-                getLogger().info("Received set full clothing message from client: " + player.getName() +
-                        ", UUID: " + data.uuid +
-                        ", Clothing Data: " + data.clothingData);
 
                 ClothingRegistry.setActiveClothingData(data.uuid, data.clothingData);
 
