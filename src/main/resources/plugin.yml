@@ -1,0 +1,7 @@
+name: AdvancedClothingPlugin
+version: '${version}'
+
+main: de.tsgscraft.advancedClothingPlugin.AdvancedClothingPlugin
+api-version: '1.21'
+
+authors: [ tsgscraft ]
